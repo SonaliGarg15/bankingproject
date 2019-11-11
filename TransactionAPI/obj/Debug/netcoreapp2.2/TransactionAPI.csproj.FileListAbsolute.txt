@@ -1,0 +1,14 @@
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\bin\Debug\netcoreapp2.2\TransactionAPI.deps.json
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\bin\Debug\netcoreapp2.2\TransactionAPI.runtimeconfig.json
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\bin\Debug\netcoreapp2.2\TransactionAPI.runtimeconfig.dev.json
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\bin\Debug\netcoreapp2.2\TransactionAPI.dll
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\bin\Debug\netcoreapp2.2\TransactionAPI.pdb
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.csproj.CoreCompileInputs.cache
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.RazorAssemblyInfo.cache
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.RazorAssemblyInfo.cs
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.AssemblyInfoInputs.cache
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.AssemblyInfo.cs
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.RazorTargetAssemblyInfo.cache
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.dll
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.pdb
+D:\NAGP\Microservices\Assignment\BankingProject\TransactionAPI\obj\Debug\netcoreapp2.2\TransactionAPI.csprojAssemblyReference.cache

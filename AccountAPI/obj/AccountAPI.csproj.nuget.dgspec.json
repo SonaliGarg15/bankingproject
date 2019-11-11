@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\NAGP\\Microservices\\Assignment\\BankingProject\\AccountAPI\\AccountAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\NAGP\\Microservices\\Assignment\\BankingProject\\AccountAPI\\AccountAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\NAGP\\Microservices\\Assignment\\BankingProject\\AccountAPI\\AccountAPI.csproj",
+        "projectName": "AccountAPI",
+        "projectPath": "D:\\NAGP\\Microservices\\Assignment\\BankingProject\\AccountAPI\\AccountAPI.csproj",
+        "packagesPath": "C:\\Users\\sonaligarg\\.nuget\\packages\\",
+        "outputPath": "D:\\NAGP\\Microservices\\Assignment\\BankingProject\\AccountAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sonaligarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Saltmarsh\\Configurator\\PackageFeed": {},
+          "D:\\Saltmarsh\\b2b\\PackageFeed": {},
+          "D:\\Saltmarsh\\common\\PackageFeed": {},
+          "https://aaz-sm-nuget.azurewebsites.net/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.RollingFile": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Steeltoe.Discovery.ClientCore": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

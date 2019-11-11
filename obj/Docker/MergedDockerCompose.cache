@@ -1,0 +1,92 @@
+services:
+  accountservice:
+    build:
+      context: D:\NAGP\Microservices\Assignment\BankingProject
+      dockerfile: AccountAPI/Dockerfile
+    container_name: accountcontainer
+    depends_on:
+    - eurekaserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    expose:
+    - '80'
+    hostname: accountservice
+    image: accountservice
+    ports:
+    - published: 5002
+      target: 80
+    - published: 59961
+      target: 80
+    volumes:
+    - C:\Users\sonaligarg\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\sonaligarg\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  configserver:
+    container_name: configservercontainersonali
+    expose:
+    - '8888'
+    hostname: configserver
+    image: sonaligarg15/configserver:latest
+    ports:
+    - published: 8888
+      target: 8888
+  eurekaserver:
+    container_name: eureka-server-container-sonali
+    expose:
+    - '8761'
+    hostname: eureka-server
+    image: sonaligarg15/bankingproject:eureka-server
+    ports:
+    - published: 8761
+      target: 8761
+  gateway:
+    build:
+      context: D:\NAGP\Microservices\Assignment\BankingProject
+      dockerfile: Gateway/Dockerfile
+    container_name: gatewaycontainer
+    depends_on:
+    - accountservice
+    - eurekaserver
+    - transactionservice
+    - userservice
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    expose:
+    - '80'
+    image: gateway
+    ports:
+    - published: 5000
+      target: 80
+    - published: 59962
+      target: 80
+    volumes:
+    - C:\Users\sonaligarg\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\sonaligarg\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  transactionservice:
+    build:
+      context: D:\NAGP\Microservices\Assignment\BankingProject
+      dockerfile: TransactionAPI/Dockerfile
+    container_name: transactioncontainer
+    depends_on:
+    - eurekaserver
+    expose:
+    - '80'
+    image: transactionservice
+    ports:
+    - published: 5006
+      target: 80
+  userservice:
+    build:
+      context: D:\NAGP\Microservices\Assignment\BankingProject
+      dockerfile: UserAPI/Dockerfile
+    container_name: usercontainer
+    depends_on:
+    - eurekaserver
+    expose:
+    - '80'
+    image: userservice
+    ports:
+    - published: 5008
+      target: 80
+version: '3.4'

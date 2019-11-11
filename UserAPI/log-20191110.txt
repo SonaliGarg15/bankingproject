@@ -1,0 +1,109 @@
+2019-11-10 19:47:13.244 +05:30 [Error] RegisterAsync Failed, request was made to http://eureka-server-container:8761/eureka/apps/USERSERVICE, retry: 0
+System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.RegisterAsyncInternal(InstanceInfo info)
+2019-11-10 19:47:13.314 +05:30 [Error] Register Failed
+Steeltoe.Discovery.Eureka.Transport.EurekaTransportException: Cannot execute request on any known server
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetServiceUrl(IList`1 candidateServiceUrls, Int32& indx)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.RegisterAsyncInternal(InstanceInfo info)
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.RegisterAsync()
+2019-11-10 19:47:13.319 +05:30 [Information] Initial Registration failed.
+2019-11-10 19:47:13.324 +05:30 [Information] Starting HeartBeat
+2019-11-10 19:47:14.191 +05:30 [Error] DoGetApplicationsAsync Failed, request was made to http://eureka-server-container:8761/eureka/apps/
+System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.DoGetApplicationsAsync(String path, ISet`1 regions)
+2019-11-10 19:47:14.203 +05:30 [Error] FetchRegistry Failed for Eureka service urls: "http://eureka-server-container:8761/eureka"
+Steeltoe.Discovery.Eureka.Transport.EurekaTransportException: Cannot execute request on any known server
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetServiceUrl(IList`1 candidateServiceUrls, Int32& indx)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.DoGetApplicationsAsync(String path, ISet`1 regions)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetApplicationsAsync(ISet`1 regions)
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.FetchFullRegistryAsync()
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.FetchRegistryAsync(Boolean fullUpdate)
+2019-11-10 19:47:14.785 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44364/api/values  
+2019-11-10 19:47:14.834 +05:30 [Information] Executing endpoint '"UserAPI.Controllers.ValuesController.Get (UserAPI)"'
+2019-11-10 19:47:14.859 +05:30 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "UserAPI.Controllers.ValuesController" ("UserAPI").
+2019-11-10 19:47:14.875 +05:30 [Information] Executing action method "UserAPI.Controllers.ValuesController.Get (UserAPI)" - Validation state: Valid
+2019-11-10 19:47:14.884 +05:30 [Information] Executed action method "UserAPI.Controllers.ValuesController.Get (UserAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.5065ms.
+2019-11-10 19:47:14.895 +05:30 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2019-11-10 19:47:14.954 +05:30 [Information] Executed action "UserAPI.Controllers.ValuesController.Get (UserAPI)" in 88.0242ms
+2019-11-10 19:47:14.957 +05:30 [Information] Executed endpoint '"UserAPI.Controllers.ValuesController.Get (UserAPI)"'
+2019-11-10 19:47:14.965 +05:30 [Information] Request finished in 183.9448ms 200 application/json; charset=utf-8
+2019-11-10 19:47:15.037 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44364/favicon.ico  
+2019-11-10 19:47:15.042 +05:30 [Information] Request finished in 4.5474ms 404 
+2019-11-10 19:58:52.861 +05:30 [Error] RegisterAsync Failed, request was made to http://eureka-server-container:8761/eureka/apps/USERSERVICE, retry: 0
+System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.RegisterAsyncInternal(InstanceInfo info)
+2019-11-10 19:58:52.914 +05:30 [Error] Register Failed
+Steeltoe.Discovery.Eureka.Transport.EurekaTransportException: Cannot execute request on any known server
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetServiceUrl(IList`1 candidateServiceUrls, Int32& indx)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.RegisterAsyncInternal(InstanceInfo info)
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.RegisterAsync()
+2019-11-10 19:58:52.920 +05:30 [Information] Initial Registration failed.
+2019-11-10 19:58:52.923 +05:30 [Information] Starting HeartBeat
+2019-11-10 19:58:53.778 +05:30 [Error] DoGetApplicationsAsync Failed, request was made to http://eureka-server-container:8761/eureka/apps/
+System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.DoGetApplicationsAsync(String path, ISet`1 regions)
+2019-11-10 19:58:53.788 +05:30 [Error] FetchRegistry Failed for Eureka service urls: "http://eureka-server-container:8761/eureka"
+Steeltoe.Discovery.Eureka.Transport.EurekaTransportException: Cannot execute request on any known server
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetServiceUrl(IList`1 candidateServiceUrls, Int32& indx)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.DoGetApplicationsAsync(String path, ISet`1 regions)
+   at Steeltoe.Discovery.Eureka.Transport.EurekaHttpClient.GetApplicationsAsync(ISet`1 regions)
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.FetchFullRegistryAsync()
+   at Steeltoe.Discovery.Eureka.DiscoveryClient.FetchRegistryAsync(Boolean fullUpdate)
+2019-11-10 19:58:54.097 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44364/api/values  
+2019-11-10 19:58:54.139 +05:30 [Information] Executing endpoint '"UserAPI.Controllers.ValuesController.Get (UserAPI)"'
+2019-11-10 19:58:54.158 +05:30 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "UserAPI.Controllers.ValuesController" ("UserAPI").
+2019-11-10 19:58:54.180 +05:30 [Information] Executing action method "UserAPI.Controllers.ValuesController.Get (UserAPI)" - Validation state: Valid
+2019-11-10 19:58:54.183 +05:30 [Information] In user api get
+2019-11-10 19:58:54.190 +05:30 [Information] Executed action method "UserAPI.Controllers.ValuesController.Get (UserAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 4.1301ms.
+2019-11-10 19:58:54.201 +05:30 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2019-11-10 19:58:54.238 +05:30 [Information] Executed action "UserAPI.Controllers.ValuesController.Get (UserAPI)" in 73.8954ms
+2019-11-10 19:58:54.241 +05:30 [Information] Executed endpoint '"UserAPI.Controllers.ValuesController.Get (UserAPI)"'
+2019-11-10 19:58:54.247 +05:30 [Information] Request finished in 153.0475ms 200 application/json; charset=utf-8

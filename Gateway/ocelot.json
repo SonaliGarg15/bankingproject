@@ -6,34 +6,22 @@
     {
       "DownstreamPathTemplate": "/api/account/{everything}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "accountservice",
-          "Port": 80
-        }
-      ],
+      "UseServiceDiscovery": true,
+      "ServiceName": "accountservice",
       "UpstreamPathTemplate": "/accountapi/{everything}"
     },
     {
       "DownstreamPathTemplate": "/api/transaction/{everything}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "transactionservice",
-          "Port": 80
-        }
-      ],
+      "UseServiceDiscovery": true,
+      "ServiceName": "transactionservice",
       "UpstreamPathTemplate": "/transactionapi/{everything}"
     },
     {
       "DownstreamPathTemplate": "/api/user/{everything}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "userservice",
-          "Port": 80
-        }
-      ],
+      "UseServiceDiscovery": true,
+      "ServiceName": "userservice",
       "UpstreamPathTemplate": "/userapi/{everything}"
     }
   ],
@@ -41,7 +29,7 @@
     "UseServiceDiscovery": true,
     "ServiceDiscoveryProvider": {
       "Type": "Eureka",
-      "Host": "localhost",
+      "Host": "eurekaserver",
       "Port": "8761"
     }
   }

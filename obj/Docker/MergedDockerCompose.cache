@@ -31,7 +31,7 @@ services:
     - published: 8888
       target: 8888
   eurekaserver:
-    container_name: eureka-server-container-sonali
+    container_name: eurekaserver
     expose:
     - '8761'
     hostname: eureka-server

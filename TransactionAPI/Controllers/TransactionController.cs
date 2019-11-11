@@ -50,5 +50,23 @@ namespace TransactionAPI.Controllers
                 return "Money information for given account not found";
             }
         }
+
+        [HttpPost("WithdrawMoney/id)")]
+        public string WithdrawMoney()
+        {
+            return "Money is withdrawn";
+        }
+
+        [HttpPost("DepositMoney/id)")]
+        public string DepositMoney()
+        {
+            return "Money is deposited";
+        }
+
+        [HttpPost("TransferMoney/id)")]
+        public string TransferMoney()
+        {
+            return "Money is transferred";
+        }
     }
 }

@@ -25,15 +25,13 @@ namespace AccountAPI.Controllers
         [HttpGet("GetAccountInfo/{id}")]
         public string GetAccountInfo()
         {
-            throw new KeyNotFoundException("Key is not found");
             try
             {
                 logger.LogInformation("Account information found");
                 return "Account information is returned";
             }
-            catch(Exception ex)
-            {
-                
+            catch
+            {                
                 logger.LogError("Account information not found");
                 return "Account information not found";
             }
@@ -52,6 +50,18 @@ namespace AccountAPI.Controllers
                 logger.LogError("Account information linked with user id not found");
                 return "Account information linked with user id not found";
             }
+        }
+
+        [HttpPost("AddAccount")]
+        public string AddAccount(string name)
+        {
+            return "New account added";
+        }
+
+        [HttpDelete("DeleteAccount/{id}")]
+        public string DeleteAccount()
+        {
+            return "Account deleted";
         }
 
         [HttpGet("GetChequeBookInfoFromAccountId/{id}")]
